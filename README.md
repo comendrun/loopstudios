@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# loopstudios-landing-page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+vist online [here](http://comendrun.com/loopstudios-landing-page/)
 
-## Available Scripts
+Frontend Mentor
 
-In the project directory, you can run:
+Notes:
 
-### `npm start`
+- i decided to change background images in different screen sizes dynamically using tailwind css. basically there are several ways to do it. using js to get screen width and then changing images with some state, or using css media queries, but in this particular project i decided to do it using tailwind css. why? because i love handling images dynamically using js and map method and not being desperate to apply media queries on all images in css.
+  so at first i tried to use inline styles in my component. i had to have a media query, but i found out that its not possible inside a react component. but there is a npm package named Radium that give us ability to do so. but i couldn't apply several styles and also a media query inside it, so it didnt work. (update: i think i couldn't successfully install the library so maybe it was my fault)
+  then i tried to use arbitrary mode in tailwind css so i tried adding images using this syntax:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+      bg-[imageImportedInComponent]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+      i dont know why but it didnt work either.
 
-### `npm test`
+      then i tried adding my images inside tailwind css extended part inside confiq file. now i was able to apply a background image using the syntax, but when i tried to change it dynamically using a database file and props from a parent component, i failed. why? i think it was because that the property names inside database were saved using strings "", and when i tried to send them over using props, they were applied with those strings, so it didnt work.
+      i tried to de-stringify those data strings using replace method, but it was a failure too.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      at the end i decided to modify my database file and change the image properties to include bg-... part so they would directly get applied as a string. but now i had to modify my classNames and with a (`{}` + mobileImage) syntax, it was all good.
 
-### `npm run build`
+      now i want to have several backgrounds (1 image and 1 linear gradient). and im researching the ways that i can apply this logic.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- implementing bottom line on nav items on desktop mode:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+it was a bit hard to add that half width border under nav items. i tried ::after pseudo class and also other ways, but i liked this method the most:
+this method was thanks to Mohammad Usman from stackoverflow. it was a great way of implementing bottom line when hover, and i liked his approach a lot.
+link: https://stackoverflow.com/questions/4131490/any-way-to-limit-border-length
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+.nav-item-desktop:hover {
+background-image: linear-gradient(white, white);
+background-repeat: no-repeat;
+background-size: 50px 10%;
+background-position: bottom;
+}
