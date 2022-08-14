@@ -1,0 +1,4 @@
+.creation-container {
+  background: linear-gradient(to right, blue, transparent);
+  background-blend-mode:color-burn;
+}

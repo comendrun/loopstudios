@@ -1,0 +1,23 @@
+.headings {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+
+.text-box p,
+.text-box h2 {
+  margin: auto;
+  /* padding-inline: 1rem; */
+  max-width: 80%;
+}
+
+.text-box p {
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+  line-height: 1.4rem;
+}

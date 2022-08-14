@@ -1,0 +1,9 @@
+/* this method was thanks to Mohammad Usman from stackoverflow. it was a great way of implementing bottom line when hover, and i liked his approach a lot.
+link: https://stackoverflow.com/questions/4131490/any-way-to-limit-border-length
+*/
+.nav-item-desktop:hover {
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  background-size: 50% 2.5px;
+  background-position: bottom;
+}

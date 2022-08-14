@@ -1,0 +1,31 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* main colors */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: #8c8c8c;
+  --very-dark-gray: hsl(0, 0%, 41%);
+
+  /* typography */
+  --ff-main: "Josefin Sans", sans-serif;
+  --ff-secondary: "Alata", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: var(--ff-main);
+}
+
+.font-main {
+  font-family: var(--ff-main);
+}
+.font-secondary {
+  font-family: var(--ff-secondary);
+}
