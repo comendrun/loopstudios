@@ -21,3 +21,24 @@
   color: var(--dark-gray);
   line-height: 1.4rem;
 }
+
+@media screen and (min-width: 1024px) {
+  .text-box p,
+  .text-box h2 {
+    margin: 0;
+    /* padding-inline: 1rem; */
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .headings {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .text-box p {
+    font-size: 1.1rem;
+  }
+}

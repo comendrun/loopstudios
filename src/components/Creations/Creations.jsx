@@ -4,33 +4,35 @@ import "./Creations.css";
 import data from "../../data";
 
 function Creations() {
-  const removeString = (expression) => {
-    return expression.replace(/\"/g, "");
-  };
-
   const allCreationsList = data.map((item, index) => {
     return (
       <Creation
         key={`${item.name + "-" + index}`}
         mobileImage={item.imageMobile}
-        desktopImage={removeString(item.imageDesktop)}
+        desktopImage={item.imageDesktop}
         headingLineOne={item.title.lineOne}
         headingLineTwo={item.title.LineTwo}
       />
     );
   });
   return (
-    <section className="text-center mx-auto flex flex-col justify-center items-center gap-8">
-      <h2 className="headings">our creations</h2>
+    <section className="text-center mx-auto flex flex-col justify-center items-center gap-8 laptop:grid laptop:justify-center grid-cols-2 laptop:mb-40">
+      <h2 className="headings laptop:order-0 laptop:m-0 text-left">
+        our creations
+      </h2>
 
-      {allCreationsList}
+      <div className="order-1 w-full mx-auto flex flex-col justify-center items-center laptop:order-2 col-span-2 laptop:grid laptop:grid-cols-4 gap-y-7">
+        {allCreationsList}
+      </div>
 
-      <a
-        href=""
-        className="see-all-button border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px] mx-auto flex justify-center text-sm"
-      >
-        See All
-      </a>
+      <div className=" order-2 laptop:order-1  laptop:ml-auto laptop:mr-10">
+        <a
+          href="#all-creations"
+          className="see-all-button border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px] mx-auto flex justify-center text-sm hover:text-white hover:bg-black ease-in-out duration-200"
+        >
+          See All
+        </a>
+      </div>
     </section>
   );
 }

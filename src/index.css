@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .background-cover {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.background-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -6,7 +6,7 @@ import { images } from "../../constants";
 function Header() {
   return (
     <section
-      className={`header-section min-h-[100vh] min-w-[100vw]  flex flex-col bg-cover bg-center bg-no-repeat bg-hero-mobile laptop:bg-hero-desktop `}
+      className={`header-section min-h-[100vh] min-w-[100vw]  flex flex-col bg-cover bg-center bg-no-repeat bg-hero-mobile laptop:bg-hero-desktop  `}
       style={{}}
     >
       <Navbar />
