@@ -3,11 +3,13 @@ import "./Footer.css";
 
 import { images } from "../../constants";
 
+import { motion } from "framer-motion";
+
 function Footer() {
   const fullYear = new Date().getFullYear();
 
   return (
-    <section className="footer w-full h-full bg-black ">
+    <section className="footer w-full h-full bg-black px-10 ">
       <div className="text-white py-14 my-10 flex flex-col gap-10 laptop:flex-row laptop:justify-between max-w-[1200px] mx-auto">
         <div className="flex flex-col gap-10 laptop:justify-start ">
           <img
@@ -22,9 +24,11 @@ function Footer() {
                 return (
                   <li
                     key={`nav-item-key-${index + "-" + item}`}
-                    className="font-bold text-base capitalize  "
+                    className="nav-item-desktop font-bold text-base capitalize cursor-pointer  "
                   >
-                    {item}
+                    <a href="" className="hover:text-[rgba(255,255,255,0.8)]">
+                      {item}
+                    </a>
                   </li>
                 );
               }
@@ -34,30 +38,54 @@ function Footer() {
 
         <div className="flex flex-col gap-10">
           <div className="social-media-container flex gap-4 mx-auto  w-full justify-center items-center laptop:mx-0 laptop:justify-end laptop:gap-6">
-            <a href="" className="laptop:">
+            <motion.a
+              href=""
+              className="laptop:"
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+            >
               <img
                 src={images.facebook}
                 alt="facebook"
                 className="laptop:w-8"
               />
-            </a>
-            <a href="" className="laptop:">
+            </motion.a>
+            <motion.a
+              href=""
+              className="laptop:"
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+            >
               <img src={images.twitter} alt="twitter" className="laptop:w-8" />
-            </a>
-            <a href="" className="laptop:">
+            </motion.a>
+            <motion.a
+              href=""
+              className="laptop:"
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+            >
               <img
                 src={images.pinterest}
                 alt="pinterest"
                 className="laptop:w-8"
               />
-            </a>
-            <a href="" className="laptop:">
+            </motion.a>
+            <motion.a
+              href=""
+              className="laptop:"
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+            >
               <img
                 src={images.instagram}
                 alt="instagram"
                 className="laptop:w-8"
               />
-            </a>
+            </motion.a>
           </div>
 
           <div className="mx-auto text-[rgba(255,255,255,0.8)] laptop:text-xl">

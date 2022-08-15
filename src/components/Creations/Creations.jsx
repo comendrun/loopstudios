@@ -16,8 +16,8 @@ function Creations() {
     );
   });
   return (
-    <section className="text-center mx-auto flex flex-col justify-center items-center gap-8 laptop:grid laptop:justify-center grid-cols-2 laptop:mb-40">
-      <h2 className="headings laptop:order-0 laptop:m-0 text-left">
+    <>
+      <h2 className="headings laptop:order-0 laptop:m-0 text-left laptop:ml-5">
         our creations
       </h2>
 
@@ -25,7 +25,7 @@ function Creations() {
         {allCreationsList}
       </div>
 
-      <div className=" order-2 laptop:order-1  laptop:ml-auto laptop:mr-10">
+      <div className=" order-2 laptop:order-1  laptop:ml-auto laptop:mr-5">
         <a
           href="#all-creations"
           className="see-all-button border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px] mx-auto flex justify-center text-sm hover:text-white hover:bg-black ease-in-out duration-200"
@@ -33,7 +33,7 @@ function Creations() {
           See All
         </a>
       </div>
-    </section>
+    </>
   );
 }
 

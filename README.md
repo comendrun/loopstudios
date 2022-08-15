@@ -1,6 +1,6 @@
 # loopstudios-landing-page
 
-vist online [here](http://comendrun.com/loopstudios-landing-page/)
+vist online [here](https://comendrun.com/loopstudios/)
 
 Frontend Mentor
 
