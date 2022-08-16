@@ -4,10 +4,10 @@ import NavMenuMobile from "./NavMenuMobile";
 
 function Navbar() {
   const [isMobileMenuShowing, setIsMobileMenuShowing] = useState(false);
-  console.log(isMobileMenuShowing);
+  // console.log(isMobileMenuShowing);
   return (
     <>
-      <div className="navbar fixed top-0 right-0 left-0 z-50 mobile-view laptop:hidden bg-[rgba(0,0,0,0.25)]">
+      <div className="navbar fixed top-0 right-0 left-0 z-50 mobile-view laptop:hidden ">
         <div className="top-section flex p-4 justify-between items-center z-50">
           <img src={images.logo} alt="logo" className=" w-36 cursor-pointer" />
           <img
@@ -26,7 +26,7 @@ function Navbar() {
         {/* mobile-view div end ==> */}
       </div>
 
-      <div className="navbar fixed top-0 right-0 left-0 z-50 desktop-view hidden laptop:flex px-20 py-10 items-center bg-[rgba(0,0,0,0.25)] backdrop-blur-md">
+      <div className="navbar fixed top-0 right-0 left-0 z-50 desktop-view hidden laptop:flex px-20 py-10 items-center ">
         <img src={images.logo} alt="logo" className=" w-56 cursor-pointer" />
 
         <ul className="nav-items-desktop flex ml-auto gap-10 text-white text-xl">
@@ -50,3 +50,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+// bg-[rgba(0,0,0,0.25)] backdrop-blur-md
