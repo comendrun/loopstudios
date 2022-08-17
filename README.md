@@ -1,35 +1,93 @@
-# loopstudios-landing-page
+# Frontend Mentor - Loopstudios landing page solution
 
-vist online [here](https://comendrun.com/loopstudios/)
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Frontend Mentor
+## Table of contents
 
-Notes:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- i decided to change background images in different screen sizes dynamically using tailwind css. basically there are several ways to do it. using js to get screen width and then changing images with some state, or using css media queries, but in this particular project i decided to do it using tailwind css. why? because i love handling images dynamically using js and map method and not being desperate to apply media queries on all images in css.
-  so at first i tried to use inline styles in my component. i had to have a media query, but i found out that its not possible inside a react component. but there is a npm package named Radium that give us ability to do so. but i couldn't apply several styles and also a media query inside it, so it didnt work. (update: i think i couldn't successfully install the library so maybe it was my fault)
-  then i tried to use arbitrary mode in tailwind css so i tried adding images using this syntax:
+## Overview
 
-      bg-[imageImportedInComponent]
+### The challenge
 
-      i dont know why but it didnt work either.
+Users should be able to:
 
-      then i tried adding my images inside tailwind css extended part inside confiq file. now i was able to apply a background image using the syntax, but when i tried to change it dynamically using a database file and props from a parent component, i failed. why? i think it was because that the property names inside database were saved using strings "", and when i tried to send them over using props, they were applied with those strings, so it didnt work.
-      i tried to de-stringify those data strings using replace method, but it was a failure too.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-      at the end i decided to modify my database file and change the image properties to include bg-... part so they would directly get applied as a string. but now i had to modify my classNames and with a (`{}` + mobileImage) syntax, it was all good.
+### Screenshot
 
-      now i want to have several backgrounds (1 image and 1 linear gradient). and im researching the ways that i can apply this logic.
+### Links
 
-- implementing bottom line on nav items on desktop mode:
+- Solution URL: [solution URL](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://comendrun.com/loopstudios/)
 
-it was a bit hard to add that half width border under nav items. i tried ::after pseudo class and also other ways, but i liked this method the most:
-this method was thanks to Mohammad Usman from stackoverflow. it was a great way of implementing bottom line when hover, and i liked his approach a lot.
-link: https://stackoverflow.com/questions/4131490/any-way-to-limit-border-length
+## My process
 
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- TailwindCSS
+- React Router DOM
+- React-Icons
+
+### What I learned
+
+- I changed background images in different screen sizes dynamically using Tailwind CSS. there are several ways to do it. using JS to get screen-width and then changing images with some state, or using CSS media queries, but in this project, I did it using Tailwind CSS. why? because I love handling images changing dynamically using JS.
+  so at first, I tried to use inline styles in my component. i had to have a media query, but I found out that it's not possible inside a react component. but there is an npm package named Radium that gives us the ability to do so. But it didn't work. (update: I think I couldn't successfully install the library so maybe it was my fault)
+  then I tried to use arbitrary mode in tailwind cos so I tried adding images using this syntax:
+
+```html
+<div className="bg-[imageImportedInComponent]"></div>
+```
+
+      i don't know why but it didn't work either.
+
+      Then I tried adding my images inside the tailwind CSS extended part inside the tailwind.config file. Now I could apply a background image using classes, but when I tried to change it dynamically using a database file and props from a parent component, I failed. Why? I think it was because the property names inside the database were saved as strings, and when I tried to send them over using props, it applied them with those strings, so it didn't work.
+      I tried to de-stringify those data strings using the replace method, but no success.
+
+      In the end, I decided to modify my database file and change the image properties to include "bg-... "  part so they would directly get applied as a string. But now I had to change my class names and with a (`{}` + mobileImage) syntax, it was all done.
+
+- implementing the bottom line on nav items on desktop mode:
+  It was difficult to add that half-width border under nav items. I tried ::after pseudo class and also other ways, but I liked this method the most:
+  this method was thanks to Mohammad Usman from stackoverflow. it was great for implementing the bottom line when hovering, and I liked his approach a lot.
+- [link](https://stackoverflow.com/questions/4131490/any-way-to-limit-border-length)
+
+```css
 .nav-item-desktop:hover {
-background-image: linear-gradient(white, white);
-background-repeat: no-repeat;
-background-size: 50px 10%;
-background-position: bottom;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  background-size: 50px 10%;
+  background-position: bottom;
 }
+```
+
+### Continued development
+
+### Useful resources
+
+- [stackoverflow](https://stackoverflow.com/questions/4131490/any-way-to-limit-border-length) - implementing the bottom line on nav items on desktop mode
+
+## Author
+
+- Personal Website - [Portfolio](https://comendrun.com/)
+- Github - [@comendrun](https://github.com/comendrun)
+- Frontend Mentor - [@comendrun](https://www.frontendmentor.io/profile/comendrun)
+- Twitter - [@comendrun](https://twitter.com/comendrun)
+
+## Acknowledgments

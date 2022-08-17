@@ -2,6 +2,7 @@ import React from "react";
 import Creation from "./Creation";
 import "./Creations.css";
 import data from "../../data";
+import { Link } from "react-router-dom";
 
 function Creations() {
   const allCreationsList = data.map((item, index) => {
@@ -11,7 +12,8 @@ function Creations() {
         mobileImage={item.imageMobile}
         desktopImage={item.imageDesktop}
         headingLineOne={item.title.lineOne}
-        headingLineTwo={item.title.LineTwo}
+        headingLineTwo={item.title.lineTwo}
+        creationId={item.id}
       />
     );
   });
@@ -26,12 +28,12 @@ function Creations() {
       </div>
 
       <div className=" order-2 laptop:order-1  laptop:ml-auto laptop:mr-5">
-        <a
-          href="#all-creations"
+        <Link
+          to="/loopstudios/products"
           className="see-all-button border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px] mx-auto flex justify-center text-sm hover:text-white hover:bg-black ease-in-out duration-200"
         >
           See All
-        </a>
+        </Link>
       </div>
     </>
   );

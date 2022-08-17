@@ -50,7 +50,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`navbar fixed top-0 right-0 left-0 z-50 mobile-view laptop:hidden bg-[rgba(0,0,0,0.25)] backdrop-blur-xl `}
+        className={`navbar fixed top-0 right-0 left-0 z-50 mobile-view laptop:hidden bg-[rgba(0,0,0,0.10)] backdrop-blur-md `}
       >
         <div className="top-section flex p-4 justify-between items-center z-50">
           <Link to="/loopstudios">
@@ -71,13 +71,14 @@ function Navbar() {
         <NavMenuMobile
           closeMenuHandler={() => setIsMobileMenuShowing(false)}
           isMobileMenuShowing={isMobileMenuShowing}
+          navLinkOnClickHandler={() => setIsMobileMenuShowing(false)}
         />
 
         {/* mobile-view div end ==> */}
       </nav>
 
       <nav
-        className={`navbar fixed top-0 right-0 left-0 z-50 desktop-view hidden laptop:flex px-20 py-7 items-center bg-[rgba(0,0,0,0.25)] backdrop-blur-xl `}
+        className={`navbar fixed top-0 right-0 left-0 z-50 desktop-view hidden laptop:flex px-20 py-7 items-center bg-[rgba(0,0,0,0.25)] backdrop-blur `}
       >
         <Link to="/loopstudios">
           <img src={images.logo} alt="logo" className=" w-56 cursor-pointer" />

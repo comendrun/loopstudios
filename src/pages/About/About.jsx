@@ -6,14 +6,14 @@ import TextBox from "../../components/TextBox/TextBox";
 
 function About() {
   return (
-    <section className="max-w-[90%] mx-auto mb-16 mt-24 flex flex-col gap-10 laptop:flex-row laptop:items-center laptop:justify-center laptop:my-48 laptop:mx-auto ">
+    <section className="max-w-[90%] mx-auto mb-16 mt-24 flex flex-col gap-10 laptop:flex-row laptop:items-center laptop:justify-center laptop:my-48 laptop:mx-auto laptop:max-w-[1000px]">
       <img
-        src={images.interactiveMobile}
+        src={images.heroMobile}
         alt="a young man having a virtual reality device on his eyes"
         className="laptop:hidden"
       />
       <img
-        src={images.interactiveDesktop}
+        src={images.heroDesktop}
         alt="a young man having a virtual reality device on his eyes"
         className="hidden laptop:flex max-w-[750px]"
       />
