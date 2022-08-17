@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/loopstudios-using-reactjs-tailwindcss-react-router-vtzG6Li85o)
 - Live Site URL: [Add live site URL here](https://comendrun.com/loopstudios/)
 
 ## My process
