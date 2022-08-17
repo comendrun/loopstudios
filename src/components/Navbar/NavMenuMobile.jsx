@@ -23,9 +23,11 @@ function NavMenuMobile({ isMobileMenuShowing, closeMenuHandler }) {
               return (
                 <li
                   key={`nav-item-key-${index + "-" + item}`}
-                  className="uppercase cursor-pointer text-2xl text-[rgba(255,255,255,0.8)]"
+                  className="uppercase cursor-pointer text-2xl duration-200 ease-out text-[rgba(255,255,255,0.8)]"
                 >
-                  {item}
+                  <a href="" className="hover:text-[rgba(255,255,255,1)]">
+                    {item}
+                  </a>
                 </li>
               );
             }

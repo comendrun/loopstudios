@@ -26,14 +26,3 @@ export function ScreenProvider({ children }) {
 }
 
 export default ScreenContext;
-
-// function scrollingValue() {
-//     const scroll = document.documentElement.scrollTop;
-//     if (scroll > headerHeight - 200) {
-//       setShowNavBG(true);
-//     } else {
-//       setShowNavBG(false);
-//     }
-//   }
-
-//   window.addEventListener("scroll", scrollingValue);
