@@ -56,12 +56,10 @@ Users should be able to:
 <div className="bg-[imageImportedInComponent]"></div>
 ```
 
-      i don't know why but it didn't work either.
-
-      Then I tried adding my images inside the tailwind CSS extended part inside the tailwind.config file. Now I could apply a background image using classes, but when I tried to change it dynamically using a database file and props from a parent component, I failed. Why? I think it was because the property names inside the database were saved as strings, and when I tried to send them over using props, it applied them with those strings, so it didn't work.
-      I tried to de-stringify those data strings using the replace method, but no success.
-
-      In the end, I decided to modify my database file and change the image properties to include "bg-... "  part so they would directly get applied as a string. But now I had to change my class names and with a (`{}` + mobileImage) syntax, it was all done.
+i don't know why but it didn't work either.
+Then I tried adding my images inside the tailwind CSS extended part inside the tailwind.config file. Now I could apply a background image using classes, but when I tried to change it dynamically using a database file and props from a parent component, I failed. Why? I think it was because the property names inside the database were saved as strings, and when I tried to send them over using props, it applied them with those strings, so it didn't work.
+I tried to de-stringify those data strings using the replace method, but no success.
+In the end, I decided to modify my database file and change the image properties to include "bg-... " part so they would directly get applied as a string. But now I had to change my class names and with a (`{}` + mobileImage) syntax, it was all done.
 
 - implementing the bottom line on nav items on desktop mode:
   It was difficult to add that half-width border under nav items. I tried ::after pseudo class and also other ways, but I liked this method the most:
