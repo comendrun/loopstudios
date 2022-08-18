@@ -105,27 +105,28 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div class="attribution text-white w-max p-2  mx-auto flex flex-wrap flex-row tablet:flex-row text-center items-center text-xs tablet:text-base">
-        <p>
+
+      <div class="attribution text-white w-max p-2  mx-auto flex flex-wrap flex-col tablet:flex-row text-center items-center text-xs">
+        <p className="">
           Challenge by &nbsp;
           <a
             target="_blank"
             href="https://www.frontendmentor.io?ref=challenge"
             rel="noreferrer"
-            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-sm tablet:text-lg"
+            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-sm laptop:text-lg "
           >
             Frontend Mentor
           </a>
           .{" "}
         </p>
         {/* <br className="tablet:hidden" /> */}
-        <p>
+        <p className="">
           &nbsp; Coded by &nbsp;
           <a
             target="_blank"
             href="https://comendrun.com/"
             rel="noreferrer"
-            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-sm tablet:text-lg"
+            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-sm laptop:text-lg "
           >
             Kamran Rouhani
           </a>
