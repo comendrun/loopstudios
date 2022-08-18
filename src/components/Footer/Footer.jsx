@@ -105,27 +105,32 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div class="attribution text-white w-max p-2  mx-auto flex text-center items-center">
-        Challenge by &nbsp;
-        <a
-          target="_blank"
-          href="https://www.frontendmentor.io?ref=challenge"
-          rel="noreferrer"
-          className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-lg"
-        >
-          Frontend Mentor
-        </a>
-        . Coded by &nbsp;
-        <a
-          target="_blank"
-          href="https://comendrun.com/"
-          rel="noreferrer"
-          className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-lg"
-        >
-          {" "}
-          Kamran Rouhani
-        </a>
-        .
+      <div class="attribution text-white w-max p-2  mx-auto flex flex-wrap flex-col tablet:flex-row text-center items-center">
+        <p>
+          Challenge by &nbsp;
+          <a
+            target="_blank"
+            href="https://www.frontendmentor.io?ref=challenge"
+            rel="noreferrer"
+            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-lg"
+          >
+            Frontend Mentor
+          </a>
+          .{" "}
+        </p>
+        {/* <br className="tablet:hidden" /> */}
+        <p>
+          &nbsp; Coded by &nbsp;
+          <a
+            target="_blank"
+            href="https://comendrun.com/"
+            rel="noreferrer"
+            className="text-[rgba(255,255,255,0.8)] hover:text-white font-bold text-lg"
+          >
+            Kamran Rouhani
+          </a>
+          .
+        </p>
       </div>
     </section>
   );
