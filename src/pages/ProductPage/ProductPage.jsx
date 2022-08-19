@@ -2,11 +2,12 @@ import React from "react";
 import "./ProductPage.css";
 
 import data from "../../data";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import TextBox from "../../components/TextBox/TextBox";
 
 function ProductPage() {
+  let navigate = useNavigate();
   const { id } = useParams();
 
   const productData = data?.filter((product) => product.id === parseInt(id))[0];
@@ -48,11 +49,15 @@ function ProductPage() {
               </p>
             </TextBox>
           </section>
-          <div className="flex w-full">
-          <Link to='/loopstudios' className="text-black laptop:text-2xl font-bold mx-auto laptop:ml-auto laptop:mr-20 border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px]  flex justify-center text-sm hover:text-white hover:bg-black ease-in-out duration-200">
-            Home &#8617;
-          </Link>
-          </div>
+          {/* <div className="flex w-full"> */}
+            <div
+              onClick={() => navigate(-1)}
+              to="/loopstudios"
+              className="text-black laptop:text-2xl font-bold mx-auto laptop:ml-auto laptop:mr-20 border-2 border-black px-4 py-2 w-40 font-secondary uppercase tracking-[5px] laptop:w-max  flex justify-center text-sm hover:text-white hover:bg-black ease-in-out duration-200"
+            >
+              Return &#8617;
+            </div>
+          {/* </div> */}
         </>
       ) : (
         <section className="max-w-[90%] mx-auto mb-16 mt-24 flex flex-col gap-10 laptop:flex-row laptop:items-center laptop:justify-around laptop:my-36 laptop:mx-auto min-h-[50vh] laptop:max-w-[1000px] ">
