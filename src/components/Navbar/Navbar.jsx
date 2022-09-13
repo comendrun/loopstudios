@@ -7,46 +7,6 @@ import { Link, NavLink } from "react-router-dom";
 function Navbar() {
   const [isMobileMenuShowing, setIsMobileMenuShowing] = useState(false);
 
-  // const [path, setPath] = useState("");
-
-  // const [isNavbarBgActiceMobile, setIsNavbarBgActiceMobile] = useState(false);
-  // const [isNavbarBgActiceDesktop, setIsNavbarBgActiceDesktop] = useState(false);
-
-  // const changeNavBgDesktop = () => {
-  //   if (path !== "/loopstudios") {
-  //     setIsNavbarBgActiceDesktop(true);
-  //   } else {
-  //     window.scrollY >= 200
-  //       ? setIsNavbarBgActiceDesktop(true)
-  //       : setIsNavbarBgActiceDesktop(false);
-  //   }
-
-  // if (window.scrollY >= 200) {
-  //   setIsNavbarBgActiceDesktop(true);
-  // } else setIsNavbarBgActiceDesktop(false);
-  // };
-  // const changeNavBgMobile = () => {
-  //   if (path !== "/loopstudios") {
-  //     setIsNavbarBgActiceMobile(true);
-  //   } else {
-  //     window.scrollY >= 200
-  //       ? setIsNavbarBgActiceMobile(true)
-  //       : setIsNavbarBgActiceMobile(false);
-  //   }
-
-  // if (window.scrollY >= 60) {
-  //   setIsNavbarBgActiceMobile(true);
-  // } else setIsNavbarBgActiceMobile(false);
-  // };
-
-  // window.addEventListener("scroll", changeNavBgDesktop);
-  // window.addEventListener("scroll", changeNavBgMobile);
-
-  // const pathname = window.location.pathname;
-  // useEffect(() => {
-  //   setPath(pathname);
-  // }, [pathname]);
-
   return (
     <>
       <nav
